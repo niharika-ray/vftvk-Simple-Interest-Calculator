@@ -1,0 +1,26 @@
+.mb-2{
+    margin-bottom:8px;
+}
+.mb-4{
+    margin-bottom:16px;
+}
+.flex{
+    display:flex; 
+}
+.w-full{
+    width: full;
+}
+.items-center{
+    align-items:center;
+}
+.heading{
+    color: #999; font-weight:bold;
+}
+.container{
+    margin: 0 auto;
+    max-width: 24rem;
+    background-color: white; padding: 8px 16px; border-radius: 16px;
+}
+.bg-black{
+    background-color: black;
+}

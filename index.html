@@ -1,16 +1,70 @@
 <html>
-    <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+<head>
+    <title>Simple Interest Calculator</title>
+    <link rel="stylesheet" href="css/index.css" />
+</head>
 
-        <button onclick="compute()">Compute</button>
-    </body>
+<body class="bg-black">
+    <div class="container">
+        <h2 class="heading">Simple Interest Calculator</h2>
+        <form id="calculatorForm" onsubmit="event.preventDefault();return getData()">
+            <dl>
+                <div class="flex w-full mb-2">
+                    <dt>
+                        <label for="amount">Amount</label>
+                    </dt>
+                    <dd>
+                        <input type="text" id="amount" name="amount" value="1000000" />
+                    </dd>
+                </div>
+                <div class="flex w-full mb-2">
+                    <dt>
+                        <label for="interest">Interest Rate</label>
+                    </dt>
+                    <dd>
+                        <div class="flex items-center">
+                            <input type="range" min="1" max="20" value="3.50" step="0.10" name="interest" id="interest"
+                                onload="printInterest(this.value)" oninput="printInterest(this.value)" />
+                            <span id="interestResult" name="interestResult"> <span>%</span>
+                        </div>
+                    </dd>
+                </div>
+                <div class="flex w-full mb-2">
+                    <dt>
+                        <label for="year">No. of Years</label>
+                    </dt>
+                    <dd>
+                        <select id="year" name="year" value="5">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option selected>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </dd>
+                </div>
+            </dl>
+            <dl>
+                <div class="flex w-full ">
+                    <dt>
+                        <button type="submit">Compute Interest</button>
+                    </dt>
+                    <dd>
+
+                    </dd>
+                </div>
+            </dl>
+        </form>
+        <div id="result" class="mb-4"></div>
+        <div> Ⓒ Everyone Can Get Rich</div>
+    </div>
+    <script type="application/javascript" src="js/index.js"></script>
+</body>
+
 </html>
